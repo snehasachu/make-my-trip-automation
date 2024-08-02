@@ -222,10 +222,14 @@ def select_sort_by_price():
 def select_sort_by_popularity():
     dashboard_page.select_sort_by_popularity()
 
-@then('select dort by duration from drop down')
+@then('select sort by duration from drop down')
 def select_sort_by_duration():
     dashboard_page.select_sort_by_duration()
 
 @then('verify the prices are in sorted or not')
 def verify_prices_order():
     assert dashboard_page.verify_prices_order()
+
+@then('verify the durations are in sorted or not')
+def verify_durations_order():
+    assert dashboard_page.verify_durations_order()

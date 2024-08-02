@@ -97,7 +97,7 @@ Feature: Make my trip Dashboard Page Tests
     And verify and click sort by drop down
     And select sort by price from drop down
     And select sort by popularity from drop down
-    And select dort by duration from drop down
+    And select sort by duration from drop down
     And user navigates to make my trip home page
 
   @dashboard @smoke @test6
@@ -109,18 +109,6 @@ Feature: Make my trip Dashboard Page Tests
     And select Planning a trip internationally
     And select round trip from trip type dropdown
     And verify departure autopopulated to anytime 7 days
-    And user navigates to make my trip home page
-
-  @dashboard
-  Scenario: Navigate to International Trip Planning Page and apply multiple filters
-    Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
-    Then refresh the my trip page
-    And click on flights header
-    And select Planning a trip internationally
-    And select multiple filters from stops
-    And verify too many filters error in page
-    And select clear all filters option
     And user navigates to make my trip home page
 
   @dashboard @regression_p0
@@ -136,7 +124,7 @@ Feature: Make my trip Dashboard Page Tests
     And select go back button
     And user navigates to make my trip home page
 
-  @dashboard @regression_p0 @test8
+  @dashboard @regression_p0
   Scenario: Verify international trip planning and price sorting functionality on dashboard
     Given user is on dashboard page
     When user in dahsboard verify make my trip title header present
@@ -145,4 +133,26 @@ Feature: Make my trip Dashboard Page Tests
     And verify and click sort by drop down
     And select sort by price from drop down
     And verify the prices are in sorted or not
+    And user navigates to make my trip home page
+
+  @dashboard @regression_p0
+  Scenario: Verify international trip planning and duration sorting functionality on dashboard
+    Given user is on dashboard page
+    When user in dahsboard verify make my trip title header present
+    Then select from as Bangalore
+    And select Planning a trip internationally
+    And select sort by duration from drop down
+    And verify the durations are in sorted or not
+    And user navigates to make my trip home page
+
+  @dashboard @test8
+  Scenario: Navigate to International Trip Planning Page and apply multiple filters
+    Given user is on dashboard page
+    When user in dahsboard verify make my trip title header present
+    Then refresh the my trip page
+    And click on flights header
+    And select Planning a trip internationally
+    And select multiple filters from stops
+    And verify too many filters error in page
+    And select clear all filters option
     And user navigates to make my trip home page

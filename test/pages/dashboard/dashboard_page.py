@@ -305,7 +305,6 @@ class DashboardPage(Page):
         self.is_element_present(*non_stop_xpath).click()
         one_stop_xpath = (By.XPATH, "(//input[@id='destinationPickerHorizontalItem'])[5]")
         self.is_element_present(*one_stop_xpath).click()
-        # time.sleep(10)
 
     def verify_too_many_filters(self):
         too_many_filters_icon = (By.XPATH, "//span[@class='multipleFilterIcon']")
@@ -350,4 +349,32 @@ class DashboardPage(Page):
                 amounts.append(amount)
         is_sorted = all(amounts[i] <= amounts[i + 1] for i in range(len(amounts) - 1))
         return is_sorted
+    
+    def verify_durations_order(self):
+        duration_elements = self.find_elements(By.CLASS_NAME, 'darkText')
+        durations = []
+        for element in duration_elements:
+            duration_text = element.text
+            days = 0           
+            hours = 0
+            minutes = 0
+        days_match = re.search(r'(\d+)\s*day[s]?', duration_text)
+        if days_match:
+            days = int(days_match.group(1))
+        
+        hours_match = re.search(r'(\d+)\s*hr[s]?', duration_text)
+        if hours_match:
+            hours = int(hours_match.group(1))
+        
+        minutes_match = re.search(r'(\d+)\s*min[s]?', duration_text)
+        if minutes_match:
+            minutes = int(minutes_match.group(1))
+        
+        total_minutes = days * 24 * 60 + hours * 60 + minutes
+        durations.append(total_minutes)
+        print(durations)
+        is_sorted = all(durations[i] <= durations[i + 1] for i in range(len(durations) - 1))
+        return is_sorted
+
+
 
