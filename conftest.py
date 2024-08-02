@@ -24,7 +24,7 @@ browser = ""
 web_driver = None
 
 def get_chromedriver_path():
-    return "C:\\Users\\DELL\\OneDrive\\Documents\\project\\chromedriver\\chromedriver.exe"
+    return os.path.dirname(os.path.abspath(__file__)) + "\\resources\\drivers\\chromedriver.exe"
 
 # pytest related fixtures
 def pytest_addoption(parser):

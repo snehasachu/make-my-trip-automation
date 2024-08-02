@@ -3,7 +3,7 @@ Feature: Make my trip Dashboard Page Tests
   @dashboard @regression_p0
   Scenario: Planning a trip internationally feature validation
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then select from as Bangalore
     And select Planning a trip internationally
     And select to as Dubai
@@ -15,7 +15,7 @@ Feature: Make my trip Dashboard Page Tests
   @dashboard @smoke
   Scenario: Navigate to make My Trip and verify the objects in the landing page
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then verify Flights header present
     And click on flights header
     And verify Hotels header present
@@ -36,7 +36,7 @@ Feature: Make my trip Dashboard Page Tests
   @dashboard @smoke
   Scenario: Navigation to International Trip Planning Page and verify the objects in the landing page
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
 #    Then select from as Bangalore
     Then refresh the my trip page
     And select Planning a trip internationally
@@ -55,7 +55,7 @@ Feature: Make my trip Dashboard Page Tests
   @dashboard @smoke
   Scenario: Navigation to International Trip Planning Page and verify the dropdowns and filters in the landing page
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
 #    Then select from as Bangalore
     Then refresh the my trip page
     And click on flights header
@@ -70,10 +70,10 @@ Feature: Make my trip Dashboard Page Tests
     And verify flights from bangaluru to header present
     And user navigates to make my trip home page
 #
-  @dashboard @smoke @test6
+  @dashboard @smoke
   Scenario: Navigation to International Trip Planning Page and verify the map functionalities
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then refresh the my trip page
     And click on flights header
 #    Then select from as Bangalore
@@ -87,10 +87,10 @@ Feature: Make my trip Dashboard Page Tests
     And verify Toggle fullscreen view button is present and clickable
     And user navigates to make my trip home page
 
-  @dashboard @test6
+  @dashboard @regression_p0
   Scenario: Navigate to International Trip Planning Page and very sort by drop down
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then refresh the my trip page
     And click on flights header
     And select Planning a trip internationally
@@ -100,10 +100,10 @@ Feature: Make my trip Dashboard Page Tests
     And select sort by duration from drop down
     And user navigates to make my trip home page
 
-  @dashboard @smoke @test6
+  @dashboard @regression_p0
   Scenario: Navigation to International Trip Planning Page and verify the round trip
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then refresh the my trip page
     And click on flights header
     And select Planning a trip internationally
@@ -111,10 +111,10 @@ Feature: Make my trip Dashboard Page Tests
     And verify departure autopopulated to anytime 7 days
     And user navigates to make my trip home page
 
-  @dashboard @regression_p0
+  @dashboard @smoke
   Scenario: Verify international trip planning with no flights found
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then select from as Bangalore
     And select Planning a trip internationally
     And select to city as Karachi
@@ -127,7 +127,7 @@ Feature: Make my trip Dashboard Page Tests
   @dashboard @regression_p0
   Scenario: Verify international trip planning and price sorting functionality on dashboard
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then select from as Bangalore
     And select Planning a trip internationally
     And verify and click sort by drop down
@@ -138,17 +138,17 @@ Feature: Make my trip Dashboard Page Tests
   @dashboard @regression_p0
   Scenario: Verify international trip planning and duration sorting functionality on dashboard
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then select from as Bangalore
     And select Planning a trip internationally
     And select sort by duration from drop down
     And verify the durations are in sorted or not
     And user navigates to make my trip home page
 
-  @dashboard @test8
+  @dashboard @regression_p0
   Scenario: Navigate to International Trip Planning Page and apply multiple filters
     Given user is on dashboard page
-    When user in dahsboard verify make my trip title header present
+    When user in dashboard verify make my trip title header present
     Then refresh the my trip page
     And click on flights header
     And select Planning a trip internationally

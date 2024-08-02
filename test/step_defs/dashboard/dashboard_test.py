@@ -12,7 +12,7 @@ def user_is_on_dashboard() -> Page:
     time.sleep(30)
     return dashboard_page
 
-@when("user in dahsboard verify make my trip title header present")
+@when("user in dashboard verify make my trip title header present")
 def verify_title_header():
     assert dashboard_page.check_title_header_present()
 
