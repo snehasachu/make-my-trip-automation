@@ -59,3 +59,6 @@ This project involves creating and automating test cases for a new feature intro
    ```
 4. Reports will be available in `reports/report.html`
 
+## Architecture 
+
+[Architecture Diagram](/docs/architecture_diagram.jpg)
