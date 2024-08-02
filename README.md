@@ -47,15 +47,15 @@ This project involves creating and automating test cases for a new feature intro
    ```bash
    git clone https://github.com/snehasachu/make-my-trip-automation/
    ```
-
-2. **Create virtual environment and install necessary requirements**
+2. **Move to the folder**
+3. Install the Pipfile, create environment and activate the environment.
    ```bash
    init.bat
    ```
    
 3. **Run test suite**
    ```bash
-   python3 execute_tests.py
+   py execute_test.py --browser chrome --scenario dashboard
    ```
 4. Reports will be available in `reports/report.html`
 
