@@ -61,4 +61,4 @@ This project involves creating and automating test cases for a new feature intro
 
 ## Architecture 
 
-[Architecture Diagram](/docs/architecture_diagram.jpg)
+![Architecture Diagram](/docs/architecture_diagram.jpg)
