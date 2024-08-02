@@ -62,3 +62,45 @@ This project involves creating and automating test cases for a new feature intro
 ## Architecture 
 
 ![Architecture Diagram](/docs/architecture_diagram.jpg)
+
+
+## Directory Structure
+
+```
+.
+├── Pipfile
+├── README.md
+├── conftest.py
+├── docs
+│   ├── architecture_diagram.jpg
+│   ├── report.pdf
+│   ├── test-begin.png
+│   └── test-complete.png
+├── execute_tests.py
+├── init.bat
+├── pytest.ini
+├── reports
+│   └── report.html
+├── resources
+│   ├── __init__.py
+│   └── drivers
+│       └── chromedriver.exe
+└── test
+    ├── __init__.py
+    ├── features
+    │   ├── __init__.py
+    │   └── dashboard
+    │       └── dashboard.feature
+    ├── pages
+    │   ├── __init__.py
+    │   └── dashboard
+    │       ├── __init__.py
+    │       └── dashboard_page.py
+    └── step_defs
+        ├── __init__.py
+        └── dashboard
+            ├── __init__.py
+            └── dashboard_test.py
+
+12 directories, 22 files
+```
