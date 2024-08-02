@@ -1,4 +1,4 @@
-# International Trip Planning Feature - Test Automation
+# MakeMyTrip - Test Automation
 
 ## Overview
 
